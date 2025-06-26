@@ -6,7 +6,7 @@ SOURCES = main.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-EXECUTABLE = program
+EXECUTABLE = scheduler
 
 all: $(EXECUTABLE)
 	

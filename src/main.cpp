@@ -119,18 +119,18 @@ int main() {
     int opt;
     cout << "1.FCFS\n2.SJF Não Preemptivo\n3.SJF Preemptivo\n4.Prioridade\n5.RR\n>";
     cin >> opt;
-    int n; cout << "#processos:\n>"; cin >> n;
+    int n; cout << "Number of processes::\n>"; cin >> n;
     vector<Process> P;
     P.reserve(n);
     for (int i = 0; i < n; ++i) {
         int arr, br, pr = 0;
-        cout << "P"<< i+1 << " chegada burst:";
+        cout << "Process"<< i+1 << " arrival burst:";
         cin >> arr >> br;
-        if (opt == 4) { cout << " prioridade:"; cin >> pr; }
+        if (opt == 4) { cout << " priority:"; cin >> pr; }
         P.emplace_back(i+1, arr, br, pr);
     }
     int q = 0;
-    if (opt == 5) { cout << "quantum:\n>"; cin >> q; }
+    if (opt == 5) { cout << "Quantum:\n>"; cin >> q; }
     switch (opt) {
         case 1: fcfs(P); break;
         case 2: sjf_np(P); break;
